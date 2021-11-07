@@ -55,6 +55,6 @@ def index(request):
 
 
 def crime_infanticide(request):
-    gdata = crime_template('INFANTICIDE')
-    data=gdata
-    return render(request,'showData.html',data)
+    data = crime_template('INFANTICIDE')
+    
+    return render(request,'showData.html',data=data)
