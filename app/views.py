@@ -221,6 +221,269 @@ def INDIA_CRIME_CHART(request):
     return render(request,'showData.html',{"data":data})
 
 
+#######################second drop down menu ####################
+
+def ANDHRA_PRADESH(request):
+    gdata = state_ut_template('ANDHRA PRADESH')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def ARUNACHAL_PRADESH(request):
+    gdata = state_ut_template('ARUNACHAL PRADESH')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def ASSAM(request):
+    gdata = state_ut_template('ASSAM')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def BIHAR(request):
+    gdata = state_ut_template('BIHAR')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def CHHATTISGARH(request):
+    gdata = state_ut_template('CHHATTISGARH')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def GOA(request):
+    gdata = state_ut_template('GOA')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def GUJARAT(request):
+    gdata = state_ut_template('GUJARAT')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def HARYANA(request):
+    gdata = state_ut_template('HARYANA')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def HIMACHAL_PRADESH(request):
+    gdata = state_ut_template('HIMACHAL PRADESH')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def JAMMU_and_KASHMIR(request):
+    gdata = state_ut_template('JAMMU & KASHMIR')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def JHARKHAND(request):
+    gdata = state_ut_template('JHARKHAND')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def KARNATAKA(request):
+    gdata = state_ut_template('KARNATAKA')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def KERALA(request):
+    gdata = state_ut_template('KERALA')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def MADHYA_PRADESH(request):
+    gdata = state_ut_template('MADHYA PRADESH')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def MAHARASHTRA(request):
+    gdata = state_ut_template('MAHARASHTRA')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def MANIPUR(request):
+    gdata = state_ut_template('MANIPUR')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def MEGHALAYA(request):
+    gdata = state_ut_template('MEGHALAYA')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def MIZORAM(request):
+    gdata = state_ut_template('MIZORAM')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def NAGALAND(request):
+    gdata = state_ut_template('NAGALAND')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def ODISHA(request):
+    gdata = state_ut_template('ODISHA')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def PUNJAB(request):
+    gdata = state_ut_template('PUNJAB')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def RAJASTHAN(request):
+    gdata = state_ut_template('RAJASTHAN')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def SIKKIM(request):
+    gdata = state_ut_template('SIKKIM')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def TAMIL_NADU(request):
+    gdata = state_ut_template('TAMIL NADU')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def TRIPURA(request):
+    gdata = state_ut_template('TRIPURA')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def UTTAR_PRADESH(request):
+    gdata = state_ut_template('UTTAR PRADESH')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def UTTARAKHAND(request):
+    gdata = state_ut_template('UTTARAKHAND')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def WEST_BENGAL(request):
+    gdata = state_ut_template('WEST BENGAL')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def A_and_N_ISLANDS(request):
+    gdata = state_ut_template('A & N ISLANDS')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def CHANDIGARH(request):
+    gdata = state_ut_template('CHANDIGARH')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def D_and_N_HAVELI(request):
+    gdata = state_ut_template('D & N HAVELI')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def DAMAN_and_DIU(request):
+    gdata = state_ut_template('DAMAN & DIU')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def DELHI(request):
+    gdata = state_ut_template('DELHI')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def LAKSHADWEEP(request):
+    gdata = state_ut_template('LAKSHADWEEP')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def PUDUCHERRY(request):
+    gdata = state_ut_template('PUDUCHERRY')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def All_States(request):
+    gdata =  all_states_and_ut_templates(list_state,28,'TOTAL STATES',16.5,0.4,1000)
+    data=gdata
+    return render(request ,'showData.html', {"data":data})
+
+def All_UT(request):
+    gdata =  all_states_and_ut_templates(list_all_ut,7,'TOTAL UNION TERRITORY',8,0.2,100)
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+
+############################ third dropdown menu ####################
+
+def crime_2001(request):
+    gdata = crime_by_year_template('2001')
+    data=gdata
+    return render(request ,'showData.html',{"data":data})
+
+def crime_2002(request):
+    gdata = crime_by_year_template('2002')
+    data=gdata
+    return render(request ,'showData.html',{"data":data})
+
+def crime_2003(request):
+    gdata = crime_by_year_template('2003')
+    data=gdata
+    return render(request ,'showData.html',{"data":data})
+
+def crime_2004(request):
+    gdata = crime_by_year_template('2004')
+    data=gdata
+    return render(request ,'showData.html',{"data":data})
+
+def crime_2005(request):
+    gdata = crime_by_year_template('2005')
+    data=gdata
+    return render(request ,'showData.html',{"data":data})
+
+def crime_2006(request):
+    gdata = crime_by_year_template('2006')
+    data=gdata
+    return render(request ,'showData.html',{"data":data})
+
+def crime_2007(request):
+    gdata = crime_by_year_template('2007')
+    data=gdata
+    return render(request ,'showData.html',{"data":data})
+
+def crime_2008(request):
+    gdata = crime_by_year_template('2008')
+    data=gdata
+    return render(request ,'showData.html',{"data":data})
+
+def crime_2009(request):
+    gdata = crime_by_year_template('2009')
+    data=gdata
+    return render(request ,'showData.html',{"data":data})
+
+def crime_2010(request):
+    gdata = crime_by_year_template('2010')
+    data=gdata
+    return render(request ,'showData.html',{"data":data})
+
+def crime_2011(request):
+    gdata = crime_by_year_template('2011')
+    data=gdata
+    return render(request ,'showData.html',{"data":data})
+
+def crime_2012(request):
+    gdata = crime_by_year_template('2012')
+    data=gdata
+    return render(request ,'showData.html',{"data":data})
+
+    
+
+
+                  ###################################        THE END               ########################
+
+
+
+
+
+
+
+
+
 
 
 
