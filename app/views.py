@@ -56,5 +56,4 @@ def index(request):
 
 def crime_infanticide(request):
     data = crime_template('INFANTICIDE')
-    
     return render(request,'showData.html',data=data)
