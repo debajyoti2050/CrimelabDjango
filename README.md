@@ -1,5 +1,5 @@
 # CrimelabDjango 
 Link---> https://crimelab.herokuapp.com/
 
-the same crimelab deployed using Django 
+the same crimelab  using Django framework
 #
