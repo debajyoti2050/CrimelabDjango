@@ -103,10 +103,11 @@ def all_states_and_ut_templates(list,id,str,a,m,n):
     data = base64.b64encode(buf.getbuffer()).decode("ascii")
     return data
 
-    
+
 
 
 # Create your views here.
+#redirecting to the home page 
 def index(request):
     #return HttpResponse("<h1>this is homepage</h1>")
     return render(request,'home.html')
@@ -120,3 +121,106 @@ def crime_infanticide(request):
     #print (gdata)
     data=gdata
     return render(request,'showData.html',{"data":data})
+
+def  crime_murder_of_children(request):
+    gdata = crime_template('MURDER OF CHILDREN')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def  crime_rape_of_children(request):
+    gdata = crime_template('RAPE OF CHILDREN')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def   crime_kidnapping_and_abduction_of_children(request):
+    gdata = crime_template('KIDNAPPING and ABDUCTION OF CHILDREN')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def  crime_foeticide(request):
+    gdata = crime_template('FOETICIDE')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def  crime_abetment_of_suicide(request):
+    gdata = crime_template('ABETMENT OF SUICIDE')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def  crime_exposure_and_abandonment(request):
+    gdata = crime_template('EXPOSURE AND ABANDONMENT')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def  crime_procuration_of_minor_girls(request):
+    gdata = crime_template('PROCURATION OF MINOR GILRS')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def  crime_buying_of_girls_for_prostitution(request):
+    gdata = crime_template('BUYING OF GIRLS FOR PROSTITUTION')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def  crime_selling_of_girls_for_prostitution(request):
+    gdata = crime_template('SELLING OF GIRLS FOR PROSTITUTION')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def  crime_prohibition_of_child_marriage_act(request):
+    gdata = crime_template('PROHIBITION OF CHILD MARRIAGE ACT')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def  crime_other_crimes_against_children(request):
+    gdata = crime_template('OTHER CRIMES AGAINST CHILDREN')
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+def total_crime(request):
+    temp1 = d[d['STATE/UT']=='TOTAL (ALL-INDIA)']
+    temp1 = temp1.sort_values(by ='TOTAL' ,ascending=False)
+    tl=temp1['TOTAL'].tolist()
+    temp1.plot(kind='bar',x='CRIME HEAD',y='TOTAL',color='red',figsize=(8,6))
+    plt.xticks(rotation='vertical')
+    plt.grid(b=True, color='purple',alpha=0.5)
+    plt.title("TOTAL CRIMES", fontdict = font1)
+    for i in range(12):
+        plt.text(x=i-0.2, y = tl[i]+1000, s = tl[i], size = 8)
+    plt.xlabel("LIST OF CRIMES", fontdict = font2)
+    plt.ylabel("RATE OF CRIMES", fontdict = font2)
+    buf = BytesIO()
+    plt.savefig(buf, format="png", bbox_inches='tight')
+    gdata = base64.b64encode(buf.getbuffer()).decode("ascii")
+    data=gdata
+    return render(request ,'showData.html',{"data":data})
+
+def INDIA_CRIME_CHART(request):
+    total_list=[]
+    for i in list_state_ut:
+        temp1 = d[d['STATE/UT'].str.contains(i)] 
+        temp2=temp1.sum(axis=0)
+        temp2=temp2['TOTAL']
+        total_list.append(temp2)
+    data = {'STATE/UT':list_state_ut, 'TOTAL':total_list}
+    ts=pd.DataFrame(data)
+    ts = ts.sort_values(by ='TOTAL' ,ascending=False)
+    tl=ts['TOTAL'].tolist() 
+    ts.plot(kind='bar',x='STATE/UT',y='TOTAL',color='red',figsize=(16.6,6))
+    plt.xticks(rotation='vertical')
+    plt.grid(b=True, color='purple',alpha=0.5)
+    plt.title("INDIAN CRIME CHART", fontdict = font1)
+    for i in range(35):
+        plt.text(x=i-0.5, y = tl[i]+1000, s = tl[i], size = 8)
+    plt.xlabel("LIST OF CRIMES", fontdict = font2)
+    plt.ylabel("RATE OF CRIMES", fontdict = font2)
+    buf = BytesIO()
+    plt.savefig(buf, format="png", bbox_inches='tight')
+    gdata = base64.b64encode(buf.getbuffer()).decode("ascii")
+    data=gdata
+    return render(request,'showData.html',{"data":data})
+
+
+
+
+
